@@ -9,18 +9,34 @@ import {BucketAccess} from './bucket-access.model'
 import * as AWS from 'aws-sdk/global';
 import * as S3 from 'aws-sdk/clients/s3';
 
+
+export interface ProcessEnv {
+  [key: string]: string | undefined
+}
+
 @Injectable()
 export class FileUploadService {
- 
+   
   bucketAccess:BucketAccess
 
   constructor(private http: HttpClient) {}
   
   openLocalCredentialsFile() {
 
+    /* Local Test Config 
     this.http.get<BucketAccess>('assets/files/credentials.json').subscribe(data => {
         this.bucketAccess = data
     })
+    */
+
+    // Heroku Production Config
+    this.bucketAccess.accessKeyId = process.env.AWS_ACCESS_KEY_ID
+    this.bucketAccess.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY
+    this.bucketAccess.bucketName = process.env.AWS_BUCKET_NAME
+    this.bucketAccess.folder = process.env.AWS_BUCKET_FOLDER
+    this.bucketAccess.region = process.env.AWS_REGION
+    this.bucketAccess.apiEndPoint = process.env.AWS_ENDPOINT
+
   }
 
   uploadfile(file: File) {
