@@ -47,6 +47,7 @@ export class FileUploadService {
     console.log("bucketAccess: "+process.env["AWS_BUCKET_NAME"])
     console.log("bucketAccess: "+this.bucketAccess.bucketName)
 
+    console.log(Object.values(process.env))
 
     const bucket = new S3(
       {
