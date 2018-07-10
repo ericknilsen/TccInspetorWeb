@@ -29,6 +29,7 @@ export class FileUploadService {
     })
     */
 
+    this.bucketAccess = new BucketAccess()
     // Heroku Production Config
     this.bucketAccess.accessKeyId = process.env.AWS_ACCESS_KEY_ID
     this.bucketAccess.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY
