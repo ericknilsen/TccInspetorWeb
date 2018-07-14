@@ -13,31 +13,32 @@ export class FileUploadComponent implements OnInit {
   messages: Message[] = []
   detailLinkLabel: string
   uploaded:boolean = false
-  fileName:string = ""
+  formData:FormData = new FormData();
 
   constructor(private fileUploadService: FileUploadService) { }
 
-  ngOnInit() {
-    this.fileUploadService.openLocalCredentialsFile()
-  }
+  ngOnInit() {}
 
-  fileChange(event) {    
+  fileChange(event) {
     let fileList: FileList = event.target.files;
     if(fileList.length > 0) {
         let file: File = fileList[0]
-        this.fileName = file.name
-        this.fileUploadService.uploadfile(file)
+        this.formData.append('file', file, file.name);
         this.uploaded = true
     } else {
-      this.fileName = ""
       this.uploaded = false
     }
   }
- 
 
-  showErrorMessages() {
-    console.log(this.fileName)
-    this.fileUploadService.showErrorMessages(this.fileName)
+  sendFile() {
+    this.fileUploadService.sendFile(this.formData)
+            .subscribe(fileName => this.showErrorMessages(fileName['file']))
+  }
+
+
+  showErrorMessages(fileName: string) {
+    console.log(fileName)
+    this.fileUploadService.showErrorMessages(fileName)
                           .subscribe(messages => this.messages = messages)
   }
 

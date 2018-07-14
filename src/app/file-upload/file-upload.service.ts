@@ -6,78 +6,24 @@ import {RequestOptions} from '@angular/http'
 import {Message} from './message.model'
 import {BucketAccess} from './bucket-access.model'
 
-import * as AWS from 'aws-sdk/global';
-import * as S3 from 'aws-sdk/clients/s3';
-
-
-export interface ProcessEnv {
-  [key: string]: string | undefined
-}
 
 @Injectable()
 export class FileUploadService {
-   
-  bucketAccess:BucketAccess
 
   constructor(private http: HttpClient) {}
-  
-  openLocalCredentialsFile() {
 
-    /* Local Test Config 
-    this.http.get<BucketAccess>('assets/files/credentials.json').subscribe(data => {
-        this.bucketAccess = data
-    })
-    */
+  sendFile(formData:FormData): Observable<FormData> {
 
-    this.bucketAccess = new BucketAccess()
-    // Heroku Production Config
-    this.bucketAccess.accessKeyId = process.env.AWS_ACCESS_KEY_ID
-    this.bucketAccess.secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY
-    this.bucketAccess.bucketName = process.env.AWS_BUCKET_NAME
-    this.bucketAccess.folder = process.env.AWS_BUCKET_FOLDER
-    this.bucketAccess.region = process.env.AWS_REGION
-    this.bucketAccess.apiEndPoint = process.env.AWS_ENDPOINT
+    let apiEndPoint:string = 'https://tcc-rest-api.herokuapp.com/upload'
 
+    return this.http.post<FormData>(`${apiEndPoint}`, formData)
   }
-
-  uploadfile(file: File) {
-
-    console.log("process.env: "+process.env)    
-    console.log("bucketAccess: "+process.env.AWS_BUCKET_NAME)
-    console.log("bucketAccess: "+process.env["AWS_BUCKET_NAME"])
-    console.log("bucketAccess: "+this.bucketAccess.bucketName)
-
-    console.log(Object.values(process.env))
-
-    const bucket = new S3(
-      {
-        accessKeyId: this.bucketAccess.accessKeyId,
-        secretAccessKey: this.bucketAccess.secretAccessKey,
-        region: this.bucketAccess.region
-      }
-    )
-
-    const params = {
-      Bucket: this.bucketAccess.bucketName,
-      Key: this.bucketAccess.folder + file.name,
-      Body: file
-    }
-
-    bucket.upload(params, function (err, data) {
-      if (err) {
-        console.log('There was an error uploading your file: ', err);
-        return false;
-      }
-
-      console.log('Successfully uploaded file.', data);
-      return true;
-    })
-  }
-
 
   showErrorMessages(fileName: string): Observable<Message[]> {
 
-    return this.http.get<Message[]>(`${this.bucketAccess.apiEndPoint}?file=${fileName}`)
+    let apiEndPoint:string = 'https://3oyeu4apak.execute-api.us-east-1.amazonaws.com/test/abntFunc'
+
+    return this.http.get<Message[]>(`${apiEndPoint}?file=${fileName}`)
   }
 
 }
