@@ -1,27 +1,42 @@
-# AbntWeb
+# TccInspetorWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+- É uma aplicação Web em Angular que possibilita a realização de upload de um arquivo texto e visualização de mensagens que descrevem inconsistências entre o conteúdo do arquivo em relação a determinado padrão. Corresponde ao componente TccInspetorWeb da arquitetura abaixo:
 
-## Development server
+![](https://github.com/ericknilsen/TccInspetor/blob/master/docs/Arquitetura_ABNT.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Utiliza as tecnologias Angular 5, HTML e Bootstrap.
+- Está implantada no Heroku.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Configuração
 
-## Build
+### Implantação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+A implantação no Heroku é feita da seguinte forma:
 
-## Running unit tests
+- Crie uma aplicação no Heroku 
+- Na aba _Deploy_ configure a conexão com este repositório
+- Habilite o deploy automático ou manual
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Esta aplicação acessa duas APIs distintas que disponibilizam serviços REST: uma implantada no Heroku e outra na AWS API Gateway. Para acessá-las, é necessário informar os valores correspondentes no arquivo _src/app/file-upload/file-upload.service.ts_
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Desenvolvimento
 
-## Further help
+- Instalação
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```shell
+$ git clone https://github.com/ericknilsen/TccInspectorWeb
+$ cd TccInspectorWeb
+$ npm install
+```
+- Execução
+
+```shell
+$ ng serve
+```
+Acesse o endereço [http://localhost:4200](http://localhost:4200)
+
+
+
+
