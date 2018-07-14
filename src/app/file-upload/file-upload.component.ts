@@ -32,11 +32,12 @@ export class FileUploadComponent implements OnInit {
 
   sendFile() {
     this.fileUploadService.sendFile(this.formData)
-            .subscribe(fileName => this.showErrorMessages(fileName['file']))
+            .subscribe(response => this.showErrorMessages(response['message']))
   }
 
 
   showErrorMessages(fileName: string) {
+    //verificar se houve erro antes de fazer esta requisição
     console.log(fileName)
     this.fileUploadService.showErrorMessages(fileName)
                           .subscribe(messages => this.messages = messages)

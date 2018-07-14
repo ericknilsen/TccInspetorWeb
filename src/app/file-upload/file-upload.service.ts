@@ -12,11 +12,11 @@ export class FileUploadService {
 
   constructor(private http: HttpClient) {}
 
-  sendFile(formData:FormData): Observable<FormData> {
+  sendFile(formData:FormData): Observable<string> {
 
     let apiEndPoint:string = 'https://tcc-rest-api.herokuapp.com/upload'
 
-    return this.http.post<FormData>(`${apiEndPoint}`, formData)
+    return this.http.post<string>(`${apiEndPoint}`, formData)
   }
 
   showErrorMessages(fileName: string): Observable<Message[]> {
