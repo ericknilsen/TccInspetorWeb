@@ -2,7 +2,7 @@
 
 - É uma aplicação Web em Angular que possibilita a realização de upload de um arquivo texto e visualização de mensagens que descrevem inconsistências no conteúdo do arquivo em relação a determinado padrão. Corresponde ao componente TccInspetorWeb da arquitetura abaixo:
 
-![](https://github.com/ericknilsen/TccInspetor/blob/master/docs/Arquitetura_ABNT.png)
+![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_ABNT.png)
 
 - Utiliza as tecnologias Angular 5, HTML e Bootstrap.
 - Está implantada no Heroku.
