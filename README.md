@@ -6,7 +6,7 @@
 
 ![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_TccInspetor.png)
 
-- It uses Angular 5, HTML and Bootstrap.
+- It was developed in Angular 5, HTML5 and Bootstrap.
 
 [//]: # (- Utiliza as tecnologias Angular 5, HTML e Bootstrap.)
 
