@@ -20,16 +20,23 @@
 ### Deployment Environment
 
 The deployment in Heroku is done as follows:
+
 [//]: # (A implantação no Heroku é feita da seguinte forma:)
 
 - Create an application on Heroku
+
 [//]: # (- Crie uma aplicação no Heroku )
+
 - On the _Deploy_ tab configure the connection to this repository
+
 [//]: # (- Na aba _Deploy_ configure a conexão com este repositório)
+
 - Enable automatic or manual deploy
+
 [//]: # (- Habilite o deploy automático ou manual)
 
 This application accesses two distinct APIs that provide REST services: one deployed in Heroku and the other in the AWS API Gateway. To access them, it is necessary to enter the corresponding values in the file _src/app/file-upload/file-upload.service.ts_
+
 [//]: # (Esta aplicação acessa duas APIs distintas que disponibilizam serviços REST: uma implantada no Heroku e outra na AWS API Gateway. Para acessá-las, é necessário informar os valores correspondentes no arquivo _src/app/file-upload/file-upload.service.ts_)
 
 
