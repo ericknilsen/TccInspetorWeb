@@ -7,8 +7,11 @@
 ![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_ABNT.png)
 
 - It uses Angular 5, HTML and Bootstrap.
+
 [//]: # (- Utiliza as tecnologias Angular 5, HTML e Bootstrap.)
+
 - It is deployed to Heroku.
+
 [//]: # (- Está implantada no Heroku.)
 
 
