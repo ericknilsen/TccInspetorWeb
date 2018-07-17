@@ -1,11 +1,13 @@
 # TccInspetorWeb
 
-- É uma aplicação Web em Angular que possibilita a realização de upload de um arquivo texto e visualização de mensagens que descrevem inconsistências no conteúdo do arquivo em relação a determinado padrão. Corresponde ao componente TccInspetorWeb da arquitetura abaixo:
+- It's a Web application in Angular that makes it possible to upload a document and view messages that describe inconsistencies related to a particular pattern. Corresponds to the TccInspetorWeb component of the following architecture:
+
+[//]: # (- É uma aplicação Web em Angular que possibilita a realização de upload de um arquivo texto e visualização de mensagens que descrevem inconsistências no conteúdo do arquivo em relação a determinado padrão. Corresponde ao componente TccInspetorWeb da arquitetura abaixo:)
 
 ![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_ABNT.png)
 
-- Utiliza as tecnologias Angular 5, HTML e Bootstrap.
-- Está implantada no Heroku.
+[//]: # (- Utiliza as tecnologias Angular 5, HTML e Bootstrap.)
+[//]: # (- Está implantada no Heroku.)
 
 
 ## Configuração
