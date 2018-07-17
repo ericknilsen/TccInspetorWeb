@@ -42,19 +42,19 @@ This application accesses two distinct APIs that provide REST services: one depl
 
 ### Development Evironment
 
-- Instalação
+- Installation
 
 ```shell
 $ git clone https://github.com/ericknilsen/TccInspectorWeb
 $ cd TccInspectorWeb
 $ npm install
 ```
-- Execução
+- Execution
 
 ```shell
 $ ng serve
 ```
-Acesse o endereço [http://localhost:4200](http://localhost:4200)
+Access the link [http://localhost:4200](http://localhost:4200)
 
 
 
