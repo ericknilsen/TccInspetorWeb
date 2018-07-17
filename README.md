@@ -6,24 +6,31 @@
 
 ![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_ABNT.png)
 
+- It uses Angular 5, HTML and Bootstrap.
 [//]: # (- Utiliza as tecnologias Angular 5, HTML e Bootstrap.)
+- It is deployed to Heroku.
 [//]: # (- Está implantada no Heroku.)
 
 
-## Configuração
+## Setup
 
-### Implantação
+### Deployment Environment
 
-A implantação no Heroku é feita da seguinte forma:
+The deployment in Heroku is done as follows:
+[//]: # (A implantação no Heroku é feita da seguinte forma:)
 
-- Crie uma aplicação no Heroku 
-- Na aba _Deploy_ configure a conexão com este repositório
-- Habilite o deploy automático ou manual
+- Create an application on Heroku
+[//]: # (- Crie uma aplicação no Heroku )
+- On the _Deploy_ tab configure the connection to this repository
+[//]: # (- Na aba _Deploy_ configure a conexão com este repositório)
+- Enable automatic or manual deploy
+[//]: # (- Habilite o deploy automático ou manual)
 
-Esta aplicação acessa duas APIs distintas que disponibilizam serviços REST: uma implantada no Heroku e outra na AWS API Gateway. Para acessá-las, é necessário informar os valores correspondentes no arquivo _src/app/file-upload/file-upload.service.ts_
+This application accesses two distinct APIs that provide REST services: one deployed in Heroku and the other in the AWS API Gateway. To access them, it is necessary to enter the corresponding values in the file _src/app/file-upload/file-upload.service.ts_
+[//]: # (Esta aplicação acessa duas APIs distintas que disponibilizam serviços REST: uma implantada no Heroku e outra na AWS API Gateway. Para acessá-las, é necessário informar os valores correspondentes no arquivo _src/app/file-upload/file-upload.service.ts_)
 
 
-### Desenvolvimento
+### Development Evironment
 
 - Instalação
 
