@@ -1,6 +1,6 @@
 # TccInspetorWeb
 
-- It's a Web application in Angular that makes it possible to upload a document and view messages that describe inconsistencies related to a particular pattern. Corresponds to the **TccInspetorWeb** component of the following architecture:
+- It's a Web application in Angular that makes it possible to upload a document and view messages that describe inconsistencies related to a particular pattern. It corresponds to the **TccInspetorWeb** component of the following architecture:
 
 ![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_TccInspetor.png)
 
