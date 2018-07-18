@@ -4,8 +4,8 @@
 
 ![](https://github.com/ericknilsen/TccInspetorCore/blob/master/docs/Arquitetura_TccInspetor.png)
 
-- It was developed in Angular 5, HTML5 and Bootstrap.
-- It is deployed to Heroku.
+- It was developed in Angular 5, HTML5 and Bootstrap
+- It is deployed to Heroku
 
 ## Setup
 
